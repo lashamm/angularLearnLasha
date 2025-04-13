@@ -9,8 +9,11 @@ import { FormsModule } from '@angular/forms';
 })
 export class MainComponent {
 textInp=''
+textInpSave=''
+myArr = []
 fun(){
- 
+this.textInpSave = this.textInp
+this.myArr.push()
 }
 fun2(){}
 }
