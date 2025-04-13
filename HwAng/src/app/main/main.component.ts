@@ -9,5 +9,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class MainComponent {
 textInp=''
-
+fun(){
+ 
+}
+fun2(){}
 }
