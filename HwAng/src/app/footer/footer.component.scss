@@ -1,0 +1,38 @@
+.footMain{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    gap:50px;
+    .rightSide{
+        width: 40%;
+        padding:10px;
+        padding-left: 50px;
+        p{
+            transition: 0.3s;
+        }
+        p:hover{
+            transform: scale(1.1);
+            transition: 0.3s;
+            color:blue;
+        }
+    }
+    ul{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        padding: 10px;
+        li{
+            list-style: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        li:hover{
+            transform: scale(1.3);
+            transition: 0.3s;
+            color:red
+        }
+    }
+}
