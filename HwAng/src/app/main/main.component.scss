@@ -1,0 +1,42 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 100%;
+    gap:30px;
+    justify-content: space-around;
+    align-items: center;
+    .mainInp{
+        input{
+            width: 400px;
+            height: 50px;
+            border-radius: 20px;
+            border:none;
+            transition: 0.3s;
+        }
+        input:hover{
+            transform: scale(1.2);
+            transition: 0.3s;
+        }
+        input[type=text]{
+            font-size: 30px;
+        }
+    }
+    .btns{
+        display: flex;
+        flex-direction: row;
+        gap:40px;
+        button{
+            width: 200px;
+            height: 50px;
+            border-radius: 20px;
+            cursor: pointer;
+            border:none;
+            transition: 0.3s;
+            font-size: 20px;
+        }
+        button:hover{
+            transform: scale(1.3);
+        }
+    }
+}
