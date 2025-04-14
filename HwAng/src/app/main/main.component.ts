@@ -8,12 +8,18 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
-textInp=''
-textInpSave=''
-myArr = []
+textInp: string = ''
+textInpSave: string = ''
+myArr: string[] = []
 fun(){
 this.textInpSave = this.textInp
-this.myArr.push()
+this.myArr.push(this.textInpSave)
+console.log(this.myArr)
+this.textInp = ''
 }
-fun2(){}
+fun2(){
+this.myArr.forEach(el => {
+  console.log(el)
+});
+}
 }
