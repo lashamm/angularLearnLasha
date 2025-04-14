@@ -20,6 +20,6 @@ this.textInp = ''
 fun2(){
 this.myArr.forEach(el => {
   console.log(el)
-});
+})
 }
 }
