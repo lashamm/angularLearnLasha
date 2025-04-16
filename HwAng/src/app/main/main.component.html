@@ -1,9 +1,16 @@
 <div class="main">
     <div class="mainInp">
-<input type="text" [(ngModel)]="textInp" placeholder="enter something">
+<input type="text"[(ngModel)]="name" placeholder="Enter Name">
+<input type="text"[(ngModel)]="age" placeholder="Enter Age">
+<input type="text"[(ngModel)]="grade" placeholder="Enter grade">
+<input type="text"[(ngModel)]="subject" placeholder="Enter subject">
+
+<input type="text"[(ngModel)]="street" placeholder="Enter street">
+<input type="text"[(ngModel)]="city" placeholder="Enter city">
+<input type="text"[(ngModel)]="zip" placeholder="Enter zip">
 </div>
 <div class="btns">
-<button (click)="fun()">Add to .array</button>
-<button (click)="fun2()">Console Log Array element</button>
+<button (click)="addStudent()">Add student</button>
+<button>Show student(s)</button>
 </div>
 </div>

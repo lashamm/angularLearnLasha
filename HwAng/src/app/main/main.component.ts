@@ -8,18 +8,35 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './main.component.scss'
 })
 export class MainComponent {
-textInp: string = ''
-textInpSave: string = ''
-myArr: string[] = []
-fun(){
-this.textInpSave = this.textInp
-this.myArr.push(this.textInpSave)
-console.log(this.myArr)
-this.textInp = ''
-}
-fun2(){
-this.myArr.forEach(el => {
-  console.log(el)
+  studentInfo :any = []
+  studentAddress :any =[]
+
+name :string = ''
+age :any = ''
+grade :any = ''
+subject :string = ''
+street :any = ''
+city :string = ''
+zip :any = ''
+
+ obj(){
+  this.studentAddress.push({
+    street: this.street,
+    city: this.city,
+    zip :this.zip
 })
+console.log(this.studentAddress)
+}
+
+addStudent(){
+  this.studentInfo.push({
+      name :this.name,
+      age :this.age,
+      grade :this.grade,
+      subject :this.subject,
+      studentAddress :this.studentAddress
+    })
+
+  console.log(this.studentInfo)
 }
 }
