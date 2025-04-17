@@ -19,17 +19,23 @@ subject :string = ''
 street :any = ''
 city :string = ''
 zip :any = ''
+ulStyle = ''
 
- obj(){
+//  obj(){
+//   this.studentAddress.push({
+//     street :this.street,
+//     city :this.city,
+//     zip :this.zip
+// })
+// console.log(this.studentAddress)
+// }
+
+addStudent(){
   this.studentAddress.push({
     street :this.street,
     city :this.city,
     zip :this.zip
 })
-console.log(this.studentAddress)
-}
-
-addStudent(){
   this.studentInfo.push({
       name :this.name,
       age :this.age,
@@ -40,5 +46,15 @@ addStudent(){
 
   console.log(this.studentInfo)
   console.log(this.studentAddress)
+
+  this.name  = ''
+  this.age  = ''
+  this.grade  = ''
+  this.subject  = ''
+  this.street  = ''
+  this.city  = ''
+  this.zip  = ''
+}
+showStudents(){
 }
 }
