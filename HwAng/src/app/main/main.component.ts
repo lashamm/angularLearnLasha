@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-main',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
@@ -21,8 +22,8 @@ zip :any = ''
 
  obj(){
   this.studentAddress.push({
-    street: this.street,
-    city: this.city,
+    street :this.street,
+    city :this.city,
     zip :this.zip
 })
 console.log(this.studentAddress)
@@ -38,5 +39,6 @@ addStudent(){
     })
 
   console.log(this.studentInfo)
+  console.log(this.studentAddress)
 }
 }
