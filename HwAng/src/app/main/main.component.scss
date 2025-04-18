@@ -46,10 +46,21 @@
         display: flex;
         flex-direction: row;
         gap:20px;
-        .studentInfo{
+        .studentCard{
             display: flex;
             flex-direction: column;
-            
+            list-style: none;
+            border: 2px solid white;
+            border-radius: 10px;
+            padding:10px;
+            cursor:pointer;
+            transition: 0.3s;
+            p{
+                color:yellow;
+            }
+        }
+        .studentCard:hover{
+            transform: scale(1.2);
         }
     }
 }

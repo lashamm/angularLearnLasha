@@ -22,17 +22,18 @@ zip :any = ''
 btn2 = 'show student(s)'
 showStudentsList = false
 
-
-//  obj(){
-//   this.studentAddress.push({
-//     street :this.street,
-//     city :this.city,
-//     zip :this.zip
-// })
-// console.log(this.studentAddress)
-// }
-
 addStudent(){
+  if(
+    this.name  == '' ||
+    this.age  == '' ||
+    this.grade  == '' ||
+    this.subject  == '' ||
+    this.street  == '' ||
+    this.city  == '' ||
+    this.zip  == ''){
+      alert('Please fill all components')
+
+  }
   this.studentAddress.push({
     street :this.street,
     city :this.city,

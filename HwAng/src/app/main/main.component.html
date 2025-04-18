@@ -9,7 +9,7 @@
 <input type="text"[(ngModel)]="city" placeholder="Enter city">
 <input type="text"[(ngModel)]="zip" placeholder="Enter zip">
 </div>
-<ul  class="listStyle">
+<!-- <ul  class="listStyle">
     <div *ngIf="showStudentsList" class="studentInfo">
     <li *ngFor="let el of studentInfo">{{el.name}}</li>
     <li *ngFor="let el of studentInfo">{{el.age}}</li>
@@ -19,7 +19,18 @@
     <li *ngFor="let el of studentInfo">{{el.studentAddress[0].city}}</li>
     <li *ngFor="let el of studentInfo">{{el.studentAddress[0].zip}}</li>
 </div>
-</ul>
+</ul> -->
+<ul class="listStyle" *ngIf="showStudentsList">
+    <li *ngFor="let el of studentInfo" class="studentCard">
+      <p><strong>Name:</strong> {{el.name}}</p>
+      <p><strong>Age:</strong> {{el.age}}</p>
+      <p><strong>Grade:</strong> {{el.grade}}</p>
+      <p><strong>Subject:</strong> {{el.subject}}</p>
+      <p><strong>Street:</strong> {{el.studentAddress[0].street}}</p>
+      <p><strong>City:</strong> {{el.studentAddress[0].city}}</p>
+      <p><strong>ZIP:</strong> {{el.studentAddress[0].zip}}</p>
+    </li>
+  </ul>
 <div class="btns">
 <button (click)="addStudent()">Add student</button>
 <button (click)="showStudents()">{{btn2}}</button>
