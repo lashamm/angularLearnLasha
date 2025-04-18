@@ -42,4 +42,14 @@
             transform: scale(1.3);
         }
     }
+    .listStyle{
+        display: flex;
+        flex-direction: row;
+        gap:20px;
+        .studentInfo{
+            display: flex;
+            flex-direction: column;
+            
+        }
+    }
 }

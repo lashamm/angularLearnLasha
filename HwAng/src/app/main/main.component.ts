@@ -19,7 +19,9 @@ subject :string = ''
 street :any = ''
 city :string = ''
 zip :any = ''
-ulStyle = ''
+btn2 = 'show student(s)'
+showStudentsList = false
+
 
 //  obj(){
 //   this.studentAddress.push({
@@ -56,5 +58,7 @@ addStudent(){
   this.zip  = ''
 }
 showStudents(){
+  this.showStudentsList = !this.showStudentsList
+  this.btn2 = 'hide student(s)'
 }
 }
