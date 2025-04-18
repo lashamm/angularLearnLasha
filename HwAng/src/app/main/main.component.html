@@ -9,17 +9,6 @@
 <input type="text"[(ngModel)]="city" placeholder="Enter city">
 <input type="text"[(ngModel)]="zip" placeholder="Enter zip">
 </div>
-<!-- <ul  class="listStyle">
-    <div *ngIf="showStudentsList" class="studentInfo">
-    <li *ngFor="let el of studentInfo">{{el.name}}</li>
-    <li *ngFor="let el of studentInfo">{{el.age}}</li>
-    <li *ngFor="let el of studentInfo">{{el.grade}}</li>
-    <li *ngFor="let el of studentInfo">{{el.subject}}</li>
-    <li *ngFor="let el of studentInfo">{{el.studentAddress[0].street}}</li>
-    <li *ngFor="let el of studentInfo">{{el.studentAddress[0].city}}</li>
-    <li *ngFor="let el of studentInfo">{{el.studentAddress[0].zip}}</li>
-</div>
-</ul> -->
 <ul class="listStyle" *ngIf="showStudentsList">
     <li *ngFor="let el of studentInfo" class="studentCard">
       <p><strong>Name:</strong> {{el.name}}</p>
