@@ -1,1 +1,14 @@
+<button (click)="addStudent()">add students</button>
 
+<div class="studentCard">
+    <div class="photo">
+    </div>
+    <div class="info">
+        <div class="nameLast" *ngFor="let el of userArr[0].data">
+            <p>First Name: {{el.first_name}}</p>
+            <p>Last Name: {{el.last_name}}</p>
+            <p>Mail: {{el.email}}</p>
+            <p>id: {{el.id}}</p>
+        </div>
+    </div>
+</div>

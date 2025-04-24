@@ -1,0 +1,20 @@
+.studentCard{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    .info{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap:30px;
+        width: 100%;
+        .nameLast{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border:1px solid black;
+        }
+    }
+}
