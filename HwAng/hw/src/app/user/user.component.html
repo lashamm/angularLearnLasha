@@ -1,8 +1,8 @@
-<div class="btnStyle">
+<div [style]='styleBtn' class="btnStyle">
     <button (click)="addStudent()">{{btn}}</button>
 </div>
 
-<div [style]='styleBtn' class="studentCard">
+<div data-aos="zoom-in"  class="studentCard">
     <div class="info">
         <div class="nameLast" *ngFor="let el of userArr[0].data">
             <img [src]="el.avatar" alt="">

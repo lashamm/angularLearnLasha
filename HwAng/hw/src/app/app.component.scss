@@ -13,3 +13,14 @@ footer{
     height: 150px;
     background-color: purple;
 }
+
+@media only screen and (max-width:762px) {
+    main{
+        height: 120vh;
+    }
+}
+@media only screen and (max-width:506px) {
+    main{
+        height: 200vh;
+    }
+}

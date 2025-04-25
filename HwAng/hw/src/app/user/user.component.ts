@@ -14,13 +14,10 @@ export class UserComponent {
   emptyArr :any[] = []
   btn = 'show students'
   styleBtn = ''
+
   addStudent(){
     this.userArr.push(this.user)
     console.log(this.userArr)
-    this.btn = 'hide students'
-
-    if(this.btn = 'hide students'){
-    
-    }
+    this.styleBtn = 'display:none'
   }
 }
