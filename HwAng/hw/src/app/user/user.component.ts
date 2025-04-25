@@ -11,9 +11,16 @@ import { CommonModule } from '@angular/common';
 export class UserComponent {
   user = new Student()
   userArr :any[] = []
-  
+  emptyArr :any[] = []
+  btn = 'show students'
+  styleBtn = ''
   addStudent(){
     this.userArr.push(this.user)
     console.log(this.userArr)
+    this.btn = 'hide students'
+
+    if(this.btn = 'hide students'){
+    
+    }
   }
 }
