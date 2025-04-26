@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Student } from '../Models/student'
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-user',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss'
 })
@@ -18,6 +19,5 @@ export class UserComponent {
   addStudent(){
     this.userArr.push(this.user)
     console.log(this.userArr)
-    this.styleBtn = 'display:none'
   }
 }
