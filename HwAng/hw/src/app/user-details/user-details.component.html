@@ -1,3 +1,7 @@
 <div [style]='styleBtn' class="btnStyle">
     <button (click)="addStudent()">{{btn}}</button>
 </div>
+<div class="div" *ngIf="user">
+    <img [src]="user?." alt="">
+<h1>{{user.email}}</h1>
+</div>

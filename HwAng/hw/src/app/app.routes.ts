@@ -12,6 +12,5 @@ export const routes: Routes = [
     {path: 'contact', component: ContactComponent},
     {path: 'about', component: AboutComponent},
     {path: 'user/:id', component: UserDetailsComponent}
-
 ];
 
