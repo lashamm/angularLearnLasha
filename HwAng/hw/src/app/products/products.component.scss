@@ -1,0 +1,48 @@
+
+main{
+    display: flex;
+    flex-direction: row;
+    gap:15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .card{
+        width: 400px;
+        height: 600px;
+        border:1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+        padding:20px;
+        text-align: center;
+        
+        img{
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+        img:hover{
+            transform: scale(1.1);
+        }
+        button{
+            padding: 10px;
+            border: none;
+            background-color: grey;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.4s ease;
+        }
+        button:hover{
+            transform: scale(1.15);
+            color:#f0a500;
+        }
+
+
+    }
+}
