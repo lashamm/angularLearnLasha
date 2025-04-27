@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hw": {
+    "HW": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "hw:build:production"
+              "buildTarget": "HW:build:production"
             },
             "development": {
-              "buildTarget": "hw:build:development"
+              "buildTarget": "HW:build:development"
             }
           },
           "defaultConfiguration": "development"
