@@ -1,1 +1,21 @@
-<p>products-info works!</p>
+
+
+<main *ngIf="product">
+    <img [src]="product.image" alt="">
+    <div class="info">
+        <h1>{{product.title}}</h1>
+        <h3>${{product.price}}</h3>
+        <span>{{product.description}}</span>
+        <h4>category: {{product.category}}</h4>
+        <div class="rating">
+        <h4>rating:</h4>
+        <br>
+        <span>rate: {{product.rating.rate}} stars</span>
+        <span>count: {{product.rating.count}} votes</span>
+    </div>
+    </div>
+    <div class="btns">
+    <button routerLink="/products">Continue shopping</button>
+    <button routerLink="/products">BUY</button>
+</div>
+</main>

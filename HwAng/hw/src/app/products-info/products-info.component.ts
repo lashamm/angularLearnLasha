@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterModule} from '@angular/router';
 import { products } from '../models/prodInfo';
+import { CommonModule } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-products-info',
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './products-info.component.html',
   styleUrl: './products-info.component.scss'
 })
 export class ProductsInfoComponent {
-  public prodcut?: products
+  public product?: products
 
   public productData: products[] = [
     {
@@ -85,4 +87,11 @@ export class ProductsInfoComponent {
       }
     }
   ]
+
+  constructor(private router: ActivatedRoute){
+    this.router.params.subscribe(params => {
+      console.log(params);
+      this.product = this.productData.find(prod => prod.id == params['id']);
+    })
+  }
 }
