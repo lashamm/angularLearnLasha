@@ -1,6 +1,6 @@
 <main>
-<div routerLink="/products/{{el.id}}" class="card" *ngFor="let el of productData">
-    <img [src]="el.image" alt="">
+<div class="card" *ngFor="let el of productData">
+    <img routerLink="/products/{{el.id}}" [src]="el.image" alt="">
     <h1>{{el.title}}</h1>
     <h3>${{el.price}}</h3>
     <button routerLink="/products/{{el.id}}">See this product</button>
