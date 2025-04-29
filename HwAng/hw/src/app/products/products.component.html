@@ -3,6 +3,6 @@
     <img routerLink="/products/{{el.id}}" [src]="el.image" alt="">
     <h1>{{el.title}}</h1>
     <h3>${{el.price}}</h3>
-    <button routerLink="/products/{{el.id}}">See this product</button>
+    <button routerLink="/products/{{el.id}}/{{el.category}}">See this product</button>
 </div>
 </main>

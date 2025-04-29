@@ -5,10 +5,10 @@ export class products{
     description!:string;
     category!:string;
     image!:string;
-    rating!:rating
+    rating!:rating;
 }
 
 class rating{
     rate!:number;
-    count!:number
+    count!:number;
 }

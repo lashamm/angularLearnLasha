@@ -19,3 +19,19 @@
     <button routerLink="/products">BUY</button>
 </div>
 </main>
+
+<div class='main' *ngFor="let el of filteredproduct">
+    <img [src]="el.image" alt="">
+    <div class="info">
+        <h1>{{el.title}}</h1>
+        <h3>${{el.price}}</h3>
+        <span>{{el.description}}</span>
+        <h4>category: {{el.category}}</h4>
+        <div class="rating">
+        <h4>rating:</h4>
+        <br>
+        <span>rate: {{el.rating.rate}} stars</span>
+        <span>count: {{el.rating.count}} votes</span>
+    </div>
+    </div>
+</div>

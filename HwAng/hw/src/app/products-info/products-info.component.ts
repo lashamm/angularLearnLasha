@@ -11,9 +11,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './products-info.component.scss'
 })
 export class ProductsInfoComponent {
-  public product?: products
+product?: products;
 
-  public productData: products[] = [
+productData: products[] = [
     {
       "id": 1,
       "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -90,8 +90,12 @@ export class ProductsInfoComponent {
 
   constructor(private router: ActivatedRoute){
     this.router.params.subscribe(params => {
-      console.log(params);
+      console.log(params['id']);
+      console.log(params['category'])
       this.product = this.productData.find(prod => prod.id == params['id']);
+      this.filteredproduct = this.productData.filter(prod => prod.category == params['category'])
     })
   }
+
+  filteredproduct ?: products[];
 }
