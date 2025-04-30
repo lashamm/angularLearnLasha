@@ -254,6 +254,6 @@ export class ProductsComponent {
         "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/red-lipstick/thumbnail.webp"
       
       }
-    ]      
+    ],      
 }
 }

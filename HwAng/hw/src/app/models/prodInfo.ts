@@ -15,7 +15,7 @@ export class products{
    warrantyInformation!:string;
    shippingInformation!:string;
    availabilityStatus!:string;
-   reviews!:[];
+   reviews!:review[];
    returnPolicy!:string;
    minimumOrderQuantity!: number;
    meta!:meta;
@@ -38,3 +38,12 @@ class meta{
     barcode!:string;
     qrCode!:string;
 }
+
+class review{
+    rating!:number;
+    comment!:string;
+    date!:string;
+    reviewerName!:string;
+    reviewerEmail!:string;
+}
+
