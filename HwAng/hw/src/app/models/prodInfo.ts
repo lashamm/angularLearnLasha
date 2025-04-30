@@ -1,14 +1,40 @@
 export class products{
-    id!:number;
-    title!:string;
-    price!:number;
-    description!:string;
-    category!:string;
-    image!:string;
-    rating!:rating;
+   id!:number;
+   title!:string;
+   description!:string;
+   category!:string;
+   price!:number;
+   discountPercentage!:number;
+   rating!:number;
+   stock!:number;
+   tags!: string[];
+   brand!:string;
+   sku!:string;
+   weight!:number;
+   dimensions!:dimensions;
+   warrantyInformation!:string;
+   shippingInformation!:string;
+   availabilityStatus!:string;
+   reviews!:[];
+   returnPolicy!:string;
+   minimumOrderQuantity!: number;
+   meta!:meta;
+   images!:string[];
+   thumbnail!: string;
+   total!:number;
+   skip!:number;
+   limit!:number;
 }
 
-class rating{
-    rate!:number;
-    count!:number;
+class dimensions{
+    width!:number;
+    height!:number;
+    depth!:number;
+}
+
+class meta{
+    createdAt!:string;
+    updatedAt!:string;
+    barcode!:string;
+    qrCode!:string;
 }
