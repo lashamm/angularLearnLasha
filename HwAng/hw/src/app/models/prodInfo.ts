@@ -1,4 +1,4 @@
-export class products{
+export class productsInfo{
    id!:number;
    title!:string;
    description!:string;
@@ -21,9 +21,6 @@ export class products{
    meta!:meta;
    images!:string[];
    thumbnail!: string;
-   total!:number;
-   skip!:number;
-   limit!:number;
 }
 
 class dimensions{
@@ -47,3 +44,8 @@ class review{
     reviewerEmail!:string;
 }
 
+
+
+export class products {
+    products!: productsInfo[];
+}
