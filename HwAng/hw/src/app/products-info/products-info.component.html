@@ -1,3 +1,40 @@
-<main *ngIf="productInfo">
-<p>{{productInfo.price}}</p>
-</main>
+<div class="card" *ngIf="productInfo">
+<div class="img">
+    <img [src]="productInfo.thumbnail" alt="">
+</div>
+<div class="info">
+    <h1>{{productInfo.title}}</h1>
+    <p>{{productInfo.description}}</p>
+    <p>Price: ${{productInfo.price}}</p>
+    <p>Category: {{productInfo.category}}</p>
+    <p>Stock: {{productInfo.stock}} left</p>
+    <p>Brand: {{productInfo.brand}}</p>
+    <p>Weigth: {{productInfo.weight}} grams</p>
+    <p>ReturnPolicy: {{productInfo.returnPolicy}}</p>
+</div>
+<div class="rating">
+    <h1>Reviews:</h1>
+    <div class="rates">
+    <p>Ratings: {{productInfo.reviews[0].rating}}</p>
+    <p>Comment: {{productInfo.reviews[0].comment}}</p>
+    <p>Date: {{productInfo.reviews[0].date}}</p>
+    <p>Name: {{productInfo.reviews[0].reviewerName}}</p>
+    <p>UserName: {{productInfo.reviews[0].reviewerEmail}}</p>
+</div>
+<div class="rates">
+    <p>Ratings: {{productInfo.reviews[1].rating}}</p>
+    <p>Comment: {{productInfo.reviews[1].comment}}</p>
+    <p>Date: {{productInfo.reviews[1].date}}</p>
+    <p>Name: {{productInfo.reviews[1].reviewerName}}</p>
+    <p>UserName: {{productInfo.reviews[1].reviewerEmail}}</p>
+</div>
+<div class="rates">
+    <p>Ratings: {{productInfo.reviews[2].rating}}</p>
+    <p>Comment: {{productInfo.reviews[2].comment}}</p>
+    <p>Date: {{productInfo.reviews[2].date}}</p>
+    <p>Name: {{productInfo.reviews[2].reviewerName}}</p>
+    <p>UserName: {{productInfo.reviews[2].reviewerEmail}}</p>
+</div>
+</div>
+<button routerLink="/products">continue shopping</button>
+</div>
