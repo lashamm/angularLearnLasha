@@ -1,8 +1,16 @@
+<div class="mainP">
 <main *ngFor="let el of products">
-<p>{{el.id}}</p>
+    <div class="card">
+        <div class="img">
+<img routerLink="products/{{el.id}}" [src]="el.thumbnail" alt="">
+</div>
+<div class="info">
 <p>{{el.title}}</p>
-<p>{{el.description}}</p>
-<p>{{el.price}}</p>
-<p>{{el.rating}}</p>
-<p>{{el.stock}}</p>
+<p>price: ${{el.price}}</p>
+<p>rating: {{el.rating}}</p>
+<p>stock: {{el.stock}}</p>
+</div>
+<button routerLink="products/{{el.id}}" >check</button>
+</div>
 </main>
+</div>
