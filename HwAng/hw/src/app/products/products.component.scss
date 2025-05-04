@@ -18,6 +18,7 @@ main{
         align-items: center;
         gap:10px;
         padding:30px;
+        width: 400px;
         .info{
             display: flex;
             flex-direction: column;
@@ -26,6 +27,8 @@ main{
         img{
             cursor: pointer;
             transition: 0.3s;
+            width: 200px;
+            height: auto;
             &:hover{
                 transform: scale(1.1);
             }

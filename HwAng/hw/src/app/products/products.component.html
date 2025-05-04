@@ -1,14 +1,15 @@
+<button (click)="getProducts()">show products</button>
+
 <div class="mainP">
-<main *ngFor="let el of products">
+<main *ngFor="let el of productArr">
     <div class="card">
         <div class="img">
-<img routerLink="/products/{{el.id}}" [src]="el.thumbnail" alt="">
+<img routerLink="/products/{{el.id}}" [src]="el.image" alt="">
 </div>
 <div class="info">
 <p>{{el.title}}</p>
 <p>price: ${{el.price}}</p>
-<p>rating: {{el.rating}}</p>
-<p>stock: {{el.stock}}</p>
+<p>category: {{el.category}}</p>
 </div>
 <button routerLink="/products/{{el.id}}" >check</button>
 </div>
