@@ -18,18 +18,14 @@ export class ProductsComponent {
   
   productArr : productsInfo[] = []
 
+  ngOnInit(){
+    this.api.getProducts().subscribe((resp: any) => {
+      console.log(resp)
+      this.productArr = resp
 
-  // ngOnInit(){
-  //   // this.router.params.subscribe(params => {
-  //   //   console.log(params['id']);
-  //   //   this.productInfo = this.productArr.find(product => product.id == params['id']);
-  //   // })
-  //   this.api.getProducts().subscribe((resp: any) => {
-  //     console.log(resp)
-  //     this.productArr = resp
-
-  //   })
-  // }
+    })
+  }
+  
   getProducts(){
     this.api.getProducts().subscribe((resp: any) => {
       console.log(resp)

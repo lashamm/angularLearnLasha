@@ -23,8 +23,15 @@ constructor(private api : ApiService, private router: ActivatedRoute){
 productInfo?: productsInfo
 productArr : productsInfo[] = []
   
+ngOnInit(){
+  this.api.getProducts().subscribe((resp: any) => {
+    console.log(resp)
+    this.productArr = resp
 
-  showProducts(){
+  })
+}
+
+  getProducts(){
     this.api.getProducts().subscribe((resp: any) => {
       console.log(resp)
       this.productArr = resp
