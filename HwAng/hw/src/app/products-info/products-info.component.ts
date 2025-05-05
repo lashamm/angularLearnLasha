@@ -13,29 +13,18 @@ import { ApiService } from '../services/api.service';
 })
 export class ProductsInfoComponent {
 constructor(private api : ApiService, private router: ActivatedRoute){
-  this.router.params.subscribe(params => {
-    console.log(params['id']);
-    this.productInfo = this.productArr.find(product => product.id == params['id']);
-  })
-  }
+  this.router.params.subscribe(ramp => {
+    console.log(ramp['id']);
+    this.productInfo = this.productArr.find(el => el.id == ramp['id'])
 
+   })
+  }
+  
 productInfo?: productsInfo
 productArr : productsInfo[] = []
   
 
-
-
-
-// constructor(private router: ActivatedRoute){
-//     this.router.params.subscribe(params => {
-//       console.log(params['id']);
-//       this.productInfo = this.productArr.find(product => product.id == params['id']);
-//     })
-//   }
-
-
-
-  getProducts(){
+  showProducts(){
     this.api.getProducts().subscribe((resp: any) => {
       console.log(resp)
       this.productArr = resp
