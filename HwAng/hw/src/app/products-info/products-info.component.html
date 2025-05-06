@@ -1,13 +1,13 @@
 
-<div class="card" *ngIf="productInfo">
+<div class="card" >
 <div class="img">
-    <img [src]="productInfo.image" alt="">
+    <img [src]="productInfo?.image" alt="">
 </div>
 <div class="info">
-    <h1>{{productInfo.title}}</h1>
-    <p>{{productInfo.description}}</p>
-    <p>Price: ${{productInfo.price}}</p>
-    <p>Category: {{productInfo.category}}</p>
+    <h1>{{productInfo?.title}}</h1>
+    <p>{{productInfo?.description}}</p>
+    <p>Price: ${{productInfo?.price}}</p>
+    <p>Category: {{productInfo?.category}}</p>
 
 </div>
 </div>

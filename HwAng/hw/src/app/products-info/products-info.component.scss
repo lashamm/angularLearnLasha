@@ -2,9 +2,11 @@
     display: flex;
     gap:50px;
     align-items: center;
+    padding-top: 150px;
     .img{
         img{
             cursor: pointer;
+            width: 300px;
             transition: 0.4s;
             &:hover{
                 transform: scale(1.3);
