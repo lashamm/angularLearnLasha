@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../services/api.service';
 
+
 @Component({
   selector: 'app-products-info',
   imports: [RouterModule, CommonModule],
@@ -12,7 +13,7 @@ import { ApiService } from '../services/api.service';
   styleUrl: './products-info.component.scss'
 })
 export class ProductsInfoComponent {
-constructor(private api : ApiService, private router: ActivatedRoute){
+constructor(private router: ActivatedRoute, private api : ApiService){
   this.router.params.subscribe(ramp => {
     console.log(ramp['id']);
     this.productInfo = this.productArr.find(el => el.id == ramp['id'])
@@ -20,9 +21,10 @@ constructor(private api : ApiService, private router: ActivatedRoute){
    })
   }
   
-productInfo?: productsInfo
+productInfo?: productsInfo = new productsInfo
 productArr : productsInfo[] = []
-  
+
+
 ngOnInit(){
   this.api.getProducts().subscribe((resp: any) => {
     console.log(resp)
